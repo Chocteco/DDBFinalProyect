@@ -1,0 +1,37 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="menu-header">
+      <h2>Eliminar Productos</h2>
+    </div>
+    
+    
+    
+    <div class="menu-container">
+      <div class="table-container">
+      <h2>Productos > Eliminar Productos</h2>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descipcion</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.id}}</td>
+              <td>{{ product.nombre}}</td>
+              <td>{{ product.descripcion }}</td>
+              <td><img width="50px" src="../../../../assets/img/eliminar.jpg" (click)="envio(product.id)"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> 
+    
+      <div class="footer">
+      <app-footer></app-footer>
+      </div>
+</div>

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<p class="titulo">Agegar Cliente</p>
+<div class="contenedor">
+    <div class="lista">
+        <div class="url">Cliente >  <span class="urlNegritas">Agregar Cliente</span></div>
+        <div class="borde"></div>
+        <form class="tabla" [formGroup]="productoForm" (ngSubmit)="envio()" id="form">
+            <div class="grupo1">
+                <label for="nombre" class="etiqueta">Nombre</label>
+                <input type="text" formControlName="nombre" class="input input1" [ngClass]="{'error': (productoForm.get('nombre')?.hasError('required') && productoForm.get('nombre')?.touched)}">
+            </div>
+            <div class="grupo1">
+                    <label for="direccion" class="etiqueta">Direccion</label>
+                    <input type="text" formControlName="direccion" class="input input2 input3" [ngClass]="{'error': (productoForm.get('direccion')?.hasError('required') && productoForm.get('direccion')?.touched)}">
+            </div>
+            <div class="grupo2">
+                <div class="contenidoGrupo2">
+                    <label for="telefono" class="etiqueta">Telefono</label>
+                    <input type="text" formControlName="telefono" class="input input2 " class="input input2" [ngClass]="{'error': (productoForm.get('telefono')?.hasError('required') && productoForm.get('telefono')?.touched)}">
+                </div>
+                <div class="contenidoGrupo2">
+                    <label for="correo_electronico" class="etiqueta">Correo Electronico</label>
+                    <input type="text" formControlName="correo_electronico" class="input input2 "  [ngClass]="{'error': (productoForm.get('correo_electronico')?.hasError('required') && productoForm.get('correo_electronico')?.touched)}">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="abajo">
+        <div class="atras" (click)="regresar()">
+            <img src="../../../../assets/img/regresar.png" alt="" class="flecha">
+            <label for="" class="regresar">Regresar</label>
+        </div>
+        <div class="guardar">
+            <button type="submit" form="form" class="agregar">Agregar</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

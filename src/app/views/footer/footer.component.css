@@ -1,0 +1,20 @@
+.footer {
+    background-color: #180f41;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    border-bottom: 1px solid #fff;
+  }
+  

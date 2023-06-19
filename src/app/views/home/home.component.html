@@ -1,0 +1,48 @@
+<div class="container">
+<app-header></app-header>
+<div class="menu-header">
+  <h2>Menú de productos</h2>
+  <select #clienteselect>
+      <option value ='0'>No existe el cliente</option>      
+      <option *ngFor="let client of clientes" value={{this.client.id}}>{{this.client.nombre}}</option>
+  </select>
+</div>
+
+
+
+<div class="menu-container">
+  <div class="button-container" *ngFor="let product of products">
+    <button (click)="addToCart(product)">{{this.product.nombre}}</button>
+  </div>
+
+  <div class="table-container">
+  <h2>Productos seleccionados</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Cantidad</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor="let product of selectedProducts">
+          <td>{{ product.cantidad}}</td>
+          <td>{{ product.nombre}}</td>
+          <td>{{ product.precio_venta }}</td>
+          <td><img width="20px" src="../../../assets/img/regresar.png" (click)="deleteCart(product.id)"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h1>Total:{{this.total | currency}}</h1>
+      <button type="submit" class="agregar" (click)='fnCompra(clienteselect.value)'>Efectuar compra</button>
+    </div>
+  </div>
+</div> 
+
+  <div class="footer">
+  <app-footer></app-footer>
+  </div>
+</div>

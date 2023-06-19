@@ -1,0 +1,43 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="menu-header">
+      <h2>Lista de Productos</h2>
+    </div>
+    
+    
+    
+    <div class="menu-container">
+      <div class="table-container">
+      <h2>Productos > Lista de Productos</h2>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descipcion</th>
+            <th>Precio Venta</th>
+            <th>Precio Compra</th>
+            <th>Cantidad Stock</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.id}}</td>
+              <td>{{ product.nombre}}</td>
+              <td>{{ product.descripcion }}</td>
+              <td>{{ product.precio_venta }}</td>
+              <td>{{ product.precio_compra }}</td>
+              <td>{{ product.cantidad_stock }}</td>
+              <td>{{ product.fecha_creacion }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> 
+    
+      <div class="footer">
+      <app-footer></app-footer>
+      </div>
+</div>

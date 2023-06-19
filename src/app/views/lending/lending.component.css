@@ -1,0 +1,246 @@
+button {
+  margin: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+} 
+
+
+.button-container {
+  flex: 0 0 auto;
+}
+
+.table-container {
+  flex: 1 1 auto;
+  margin-left: 20px;
+}
+.button-container button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 80px;
+  border: none;
+  background-color: #00BEB5;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.button-container button:hover {
+  background-color: #00ff08;
+  cursor: pointer;
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin-right: 10px;
+}
+
+select {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.agregar{
+  display: flex;
+  width: 14.3rem;
+  height: 2.5rem;
+  margin-left: 45rem;
+
+  background: #00BEB5;
+  box-shadow: 0px 6px 10px rgba(18, 18, 18, 0.1);
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.2rem;    
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+htSml, body {
+height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%
+}
+
+.table-container {
+  width: 1 1 50%;
+}
+
+/* Resto del código CSS */
+
+/* Resto del código CSS */
+
+
+/* Resto del código CSS */
+
+.footer {
+flex-shrink: 0;
+padding: 20px;
+background-color: #f5f5f5;
+}
+*{
+  font-family: 'Outfit';
+  font-style: normal;
+}
+.titulo{
+  margin-top: 1.7rem;
+  margin-left: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #242338;
+  line-height: 40px;
+}
+
+.arriba{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3.5rem;
+}
+
+.lista{
+  margin-top: 0rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2.2rem;
+  width: 70rem;
+}
+.url{
+  font-size: 1.12rem;
+}
+.urlNegritas{
+  font-weight: 600;
+}
+.borde{
+  width: 100%;
+  height: 0.6rem;
+  margin-top: 1rem;
+
+  background: #031927;
+  /* principal */
+
+  border: 1px solid #051A2B;
+  border-radius: 10px 10px 0px 0px;}
+
+.tabla{
+  margin-top: 0;
+  border: 1px solid #E2E2E2;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  padding: 3rem 3rem 2rem 3rem;
+}
+
+.grupo1{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.grupo2{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.contenidoGrupo2{
+  display: flex;
+  width: 50%;
+}
+
+.etiqueta{
+  font-size: 1rem;
+  width: 8rem;
+  font-weight: 400;
+}
+.etiqueta2{
+  margin-top: 1rem;
+}
+
+.input{
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 8px;
+  height: 3.5rem;
+  font-size: 1rem;
+}
+.input1{
+  width: 86%;
+}
+.input2{
+  width: 72%;
+}
+
+.abajo{
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.atras{
+  display: flex;
+  cursor: pointer;
+}
+.flecha{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+.regresar{
+  margin-top: -0.4rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.agregar{
+  display: flex;
+  width: 14.3rem;
+  height: 2.5rem;
+  margin-left: 45rem;
+
+  background: #00BEB5;
+  box-shadow: 0px 6px 10px rgba(18, 18, 18, 0.1);
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.2rem;    
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.error{
+  border-color: red;
+}
+input.error {
+  border-color: red;
+}

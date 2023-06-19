@@ -1,0 +1,92 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="menu-header">
+      <h2>Actualizar Productos</h2>
+    </div>
+    
+    
+    
+    <div class="menu-container">
+      <div class="table-container">
+      <h2>Productos > Actualizar Productos</h2>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descipcion</th>
+            <th>Actualizar</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.id}}</td>
+              <td>{{ product.nombre}}</td>
+              <td>{{ product.descripcion }}</td>
+              <td><img width="50px" src="../../../../assets/img/actualizar.png" (click)="getProduct(product.id)"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="contenedor">
+    <div class="lista">
+        <div class="borde"></div>
+        <form class="tabla" [formGroup]="productoForm" (ngSubmit)="envio(this.datos.strAnswer[0].id)" id="form">
+            <div class="grupo1">
+                <label for="nombre" class="etiqueta">Nombre</label>
+                <input [value]="this.datos.strAnswer[0].nombre" type="text" formControlName="nombre" class="input input1" [ngClass]="{'error': (productoForm.get('nombre')?.hasError('required') && productoForm.get('nombre')?.touched)}">
+            </div>
+            <div class="grupo1">
+                    <label for="descripcion" class="etiqueta">Descripcion</label>
+                    <input [value]="this.datos.strAnswer[0].descripcion" type="text" formControlName="descripcion" class="input input2 input3" [ngClass]="{'error': (productoForm.get('descripcion')?.hasError('required') && productoForm.get('descripcion')?.touched)}">
+            </div>
+            <div class="grupo2">
+                <div class="contenidoGrupo2">
+                    <label for="precio_venta" class="etiqueta">Precio Venta</label>
+                    <input [value]="this.datos.strAnswer[0].precio_venta" type="text" formControlName="precio_venta" class="input input2 " class="input input2" [ngClass]="{'error': (productoForm.get('precio_venta')?.hasError('required') && productoForm.get('precio_venta')?.touched)}">
+                </div>
+                <div class="contenidoGrupo2">
+                    <label for="precio_compra" class="etiqueta">Precio Compra</label>
+                    <input [value]="this.datos.strAnswer[0].precio_compra" type="text" formControlName="precio_compra" class="input input2 "  [ngClass]="{'error': (productoForm.get('precio_compra')?.hasError('required') && productoForm.get('precio_compra')?.touched)}">
+                </div>
+            </div>
+            <div class="grupo2">
+                <div class="contenidoGrupo2">
+                    <label for="cantidad_stock" class="etiqueta etiqueta2">Cantidad en Stock</label>
+                    <input [value]="this.datos.strAnswer[0].cantidad_stock" type="text" formControlName="cantidad_stock" class="input input2" [ngClass]="{'error': (productoForm.get('cantidad_stock')?.hasError('required') && productoForm.get('cantidad_stock')?.touched)}">
+                </div>
+                <div class="contenidoGrupo2">
+                    <label for="cantidad_minima" class="etiqueta etiqueta2">Cantidad Minima</label>
+                    <input [value]="this.datos.strAnswer[0].cantidad_minima" type="text" formControlName="cantidad_minima" class="input input2" [ngClass]="{'error': (productoForm.get('cantidad_minima')?.hasError('required') && productoForm.get('cantidad_minima')?.touched)}">
+                </div>
+            </div>
+            <div class="grupo2">
+                <div class="contenidoGrupo2">
+                    <label for="categoria_id" class="etiqueta">Empresa</label>
+                    <select  [value]="this.datos.strAnswer[0].categoria_id" name="IdEmpresa" class="input input2" id="IdEmpresa" formControlName="categoria_id"
+                        [ngClass]="{'error': (productoForm.get('categoria_id')?.hasError('required') && productoForm.get('categoria_id')?.touched)}">
+                        <option value="" selected disabled>Selecciona la Empresa</option>
+                        <option *ngFor="let category of categoria" value="{{this.category.id}}">{{this.category.nombre}}</option>
+                        <!--<option *ngFor="let dato of datos | paginate: config; let ultimo = last; let posicion = index" [ngClass]="{'ultimo': ultimo}" value="{{dato.idempresa}}">{{dato.nombre}}</option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="grupo1">
+                <label for="imagen" class="etiqueta">Subir imagen:</label>
+                <input type="file" formControlName="imagen" class="input1 input1" [ngClass]="{'error': (productoForm.get('imagen')?.hasError('required') && productoForm.get('imagen')?.touched)}">
+            </div>
+        </form>
+    </div>
+    <div class="abajo">
+        <div class="guardar">
+            <button type="submit" form="form" class="agregar">Actualizar</button>
+        </div>
+      </div>
+    </div> 
+    
+      <div class="footer">
+      <app-footer></app-footer>
+      </div>
+</div>
